@@ -1,0 +1,28 @@
+v2018.12.20_1
+1. Open the script "Test_CustomAllWorkItemsPage.sql" in SQL Server Management Studio.
+   (This only serves as a test to bring back results.)
+   Edit this script to return the results that you wish to provide in the view you are creating.
+   Ensure that no SQL errors occur when executing this script.
+2. Open the Create_CustomAllWorkItemsPage.sql for editing.
+3. Use a GUID generator to create some new guids for your view panel and navigation node.  
+   NOTE: All guids must be completely lower case. 
+   To create new GUID in Powershell use: [GUID]::NewGuid()
+4. Set the declared variables for:
+ - Menu Title
+ - Page Title
+ - Locale
+ - DivID
+and
+ - Script Location 
+5. Copy the SQL query created in step one to the relevent location in the Create_CustomAllWorkItemsPage.sql script.
+6. Use a GUID generator to create some new guids for your view panel and navigation node and enter the value at the top of the Create_CustomAllWorkItemsPage.sql script.  
+   NOTE: All guids must be completely lower case. You can use Powershell to generate GUIDs -- [GUID]::NewGuid()
+7. Execute the script Create_CustomAllWorkItemsPage.sql. 
+   This will insert a new datasource, ViewPanel, and Navigation Node into the ServiceManagement table.
+8. In the Portal, a new navigation node will appear called "Custom All Work" (Or whatever you have called the view).
+9. Make it visible and set access tot he view as requitred.
+10. Copy Dashboard_AllWorkItems.js into CustomSpace in the location and name specified in step 4.
+
+Navigate to the page to verify the results you wished to create.
+Something like http://scsm2016/View/a8045e60-8db2-4f14-80f5-93bb4da011e9. 
+A grid will appear on the page showing your work items.
